@@ -1,0 +1,18 @@
+import { IMotorcycle } from "./motorcycle.interface";
+
+export class Motorcycle implements IMotorcycle {
+  constructor(color: string, year: number, engine: number) {
+    this.configureMotorcycle(color, year, engine);
+  }
+  startVehicle(): void {
+    console.log("Starting engine...");
+  }
+
+  configureMotorcycle(color: string, year: number, engine: number): void {
+    console.log(
+      `Uma moto da cor ${color}, do ano ${year}, com ${engine} cilindradas`
+    );
+
+    this.startVehicle();
+  }
+}
